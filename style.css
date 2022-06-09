@@ -1,11 +1,14 @@
 body {
     background-color: rgb(137, 182, 174);
+    
     font-family: serif;
 }
 
 h1{
     display: flex;
     justify-content: center;
+    color: darkblue;
+    font-size: 50px;
 }
 .content{
     display: flex;
@@ -19,6 +22,7 @@ h1{
 
 #input {
     border-radius: 15px;
+    margin-right: 5px;
 }
 #gif-area {
     display: flex;
@@ -35,5 +39,14 @@ h1{
     margin: auto;
     padding: 7px;
     justify-content: center;
+    background-color: rgb(153, 88, 153);
+    color: white;
+
+}
+#giffy {
+    font-size: 15px;
+    margin-right: 5px;
+    font-family: Helvetica, sans-serif;
+    
 
 }
