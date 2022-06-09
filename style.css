@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(137, 182, 174);
+    font-family: serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.search {
+    display: flex;
+    margin: auto;
+}
+
+#input {
+    border-radius: 15px;
+}
+#gif-area {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}
+
+.show-more {
+    display: flex;
+    margin: auto;
+    padding: 7px;
+    justify-content: center;
+
+}

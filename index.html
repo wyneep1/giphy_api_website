@@ -9,16 +9,16 @@
 </head>
 <body>
     <h1>GIPHY PARTY!</h1>
-    <form>
-        <div>
-            <label for="gifname"> What GIF do you want? </label>
-            <input type="text" id="gifname" name="GIF" placeholder="puppies" required/>
-            <input type="submit">
+    
+        <div class="content">
+            <form class="search">
+                <label for="gifname"> What GIF do you want? </label>
+                <input type="text" id="input" name="GIF" placeholder="puppies" required/>
+                <button id="submit">Submit</button>
+            </form>
+            <div id="gif-area"></div>
         </div>
         
-               
-    </form>
-    <div id="gif-area"></div>
     <button class="show-more hidden">Show More</button>
   
     <script src="app.js"></script>
