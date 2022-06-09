@@ -1,18 +1,19 @@
 console.log("Page loaded");
 
-//add Query selectors here
-const API_KEY = 'nOjzgnRK5wSxGHruvjd3HVSux7Zxk46H'
-const gifArea = document.querySelector("#gif-area");
-const gifForm = document.querySelector("form");
-const input = document.querySelector("#gifname")
-
 //Global Constants
 //We recommend holding variables for at least your api-key, limit, and rating. Add them at the top under the Global Constants comment.
+const offset = 0;
 const apiKey = null;
-const limit = null;
 const rating = null;
-console.log("You are here")
+const API_KEY = 'nOjzgnRK5wSxGHruvjd3HVSux7Zxk46H';
+let  limit = 10;
 
+//add Query selectors here
+const gifArea = document.querySelector("#gif-area"); //results
+const gifForm = document.querySelector("form");//search
+const input = document.querySelector("#gifname"); 
+//const submitForm = document.querySelector('.search');
+console.log("You are here");
 
 //control form behavior upon submitting
 gifForm.addEventListener("submit", getResults);
@@ -31,26 +32,29 @@ async function getResults(e) {
     let responseData = await response.json();
     console.log("reponseData is: ", responseData);
     // + evt.target.gif.value;
-
-    return responseData.data;
-    
+    displayResults(responseData.data);
 //event.target.<name>.value
 
 //generateHTML(responseData);
 
 
 }
-function displayResults(gifData){
-    gifArea.innerHTML = 
-    map(())
-    /*`
-    <h1>${gifData.species.name}</h1>
-    <p>Height: ${gifData.height}</p>
-    <p>Weight: ${gifData.weight}</p>
-    <img src="/> 
-    `;*/
+function displayResults(arr){
+    arr.forEach((element, ind)=>{
+        let gifUrl = element.images.fixed_height.url;
+        let title = element.title;
+    //create and add HTML element
+    gifArea.innerHTML += `
+    <div class="gif ${ind + offset}">
+    <img src="${gifUrl}" alt="${title}"> 
+    </div>
+    `;
+    });
 }
 
 function handleFormSubmit(){
-
+    return input.value;
 }
+
+//event listeners
+//submitForm.addEventListener("submit", );
